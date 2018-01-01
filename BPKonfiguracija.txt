@@ -1,0 +1,5 @@
+korisnicko_ime:root
+sifra:Sinergija@97
+ime_baze:studentski_servis
+ip_adresa:127.0.0.1
+port:3306
