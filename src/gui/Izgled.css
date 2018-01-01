@@ -1,4 +1,7 @@
+/*------------*/
 /* Zajednicko */
+/*------------*/
+
 .button {
     -fx-background-color: #F07444;
     -fx-text-fill: white;
@@ -22,16 +25,70 @@
     -fx-border-width: 0 0 1 0;
     -fx-border-style: solid;
     -fx-text-fill: rgb(62, 64, 149);
+    -fx-font-size: 20;
+    -fx-alignment: TOP_LEFT;
 }
 
 #okvir {
     -fx-border-color: rgb(62, 64, 149);
     -fx-border-width: 1 1 1 1;
     -fx-border-style: solid;
+    -fx-padding: 20 0 20 0;
+    -fx-alignment: CENTER;
 }
 
+#layout {
+    -fx-spacing: 8;
+    -fx-padding: 0 10 0 0;
+}
 
+/*-------*/
+/* Login */
+/*-------*/
+
+#border {
+    -fx-border-color: rgba(62, 64, 149, 1);
+    -fx-border-width: 5;
+    -fx-border-style: solid;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-alignment: CENTER;
+    -fx-spacing: 10;
+    -fx-padding: 25;
+}
+
+.text-field {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+}
+.text-field:focused {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+}
+
+/*------------*/
+/* Navigacija */
+/*------------*/
+
+#navigacija {
+    -fx-spacing: 2;
+    -fx-padding: 10 25 25 25;
+}
+
+#studentskiServis {
+    -fx-text-fill: rgb(62, 64, 149);
+    -fx-font-size: 40;
+}
+
+#header {
+    -fx-spacing: 50;
+    -fx-padding: 25;
+    -fx-alignment: BOTTOM_LEFT;
+}
+
+/*--------------*/
 /* Obavjestenja */
+/*--------------*/
+
 .scroll-pane {
     -fx-background-color: transparent;
     -fx-border-color: rgb(62, 64, 149);
@@ -63,27 +120,45 @@
     -fx-fit-to-width: true;
 }
 
-/* Login */
-#border {
-    -fx-border-color: rgba(62, 64, 149, 1);
-    -fx-border-width: 5;
+#containerObavjestenja {
+    -fx-spacing: 5;
+    -fx-padding: 15 35 35 35;
+    -fx-alignment: TOP_CENTER;
+}
+
+#obavjestenjaLayout {
+    -fx-spacing: 5;
+    -fx-padding: 0 10 0 0;
+}
+
+/*-----------*/
+/* Skolarina */
+/*-----------*/
+
+#hbox {
+    -fx-background-color: rgb(169, 169, 169);
+    -fx-border-color: rgb(62, 64, 149);
+    -fx-border-width: 1 1 1 1;
     -fx-border-style: solid;
-    -fx-border-radius: 10 10 10 10;
-    -fx-background-radius: 15 15 15 15;
-    -fx-background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*--------------------*/
+/* Prijavljeni ispiti */
+/*--------------------*/
+
+#okvirPrijavljeni {
+    -fx-border-color: rgb(62, 64, 149);
+    -fx-border-width: 1 1 1 1;
+    -fx-border-style: solid;
+    -fx-spacing: 5;
+    -fx-padding: 8 0 8 0;
     -fx-alignment: CENTER;
-    -fx-spacing: 10;
-    -fx-padding: 25;
 }
 
-.text-field {
-    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
-}
-.text-field:focused {
-    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
-}
-
+/*-----------*/
 /* Moj nalog */
+/*-----------*/
+
 #lijevi {
     -fx-background-color: #F07444;
     -fx-border-color: white;
@@ -107,10 +182,7 @@
     -fx-border-width: 2;
 }
 
-/* Skolarina */
-#hbox {
-    -fx-background-color: rgb(169, 169, 169);
-    -fx-border-color: rgb(62, 64, 149);
-    -fx-border-width: 1 1 1 1;
-    -fx-border-style: solid;
+#mojNalogLayout {
+    -fx-spacing: 8;
 }
+

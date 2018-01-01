@@ -1,8 +1,6 @@
 package gui.navigacija;
 
 import java.nio.file.Paths;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -10,7 +8,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 
 public abstract class NavigacijaGUI {
     
@@ -55,8 +52,7 @@ public abstract class NavigacijaGUI {
         mojNalog       = new Button("Moj Nalog");
         odjava         = new Button("Odjava");
         
-        navigacija.setPadding(new Insets(10, 25, 25, 25));
-        navigacija.setSpacing(2);
+        navigacija.setId("navigacija");
         
         obavjestenja.setPrefSize(190, 55);
         skolarina.setPrefSize(190, 55);
@@ -67,7 +63,6 @@ public abstract class NavigacijaGUI {
         odjava.setPrefSize(190, 55);
         
         obavjestenja.requestFocus();
-        
         navigacija.getChildren().addAll(obavjestenja, skolarina, mojiPredmeti, polozeniIspiti,
                                         prijaviIspit, mojNalog, odjava);
     }
@@ -77,15 +72,12 @@ public abstract class NavigacijaGUI {
         logo   = new ImageView(relativnaAdresa + "\\slike\\logo.png");
         naslov = new Label("Studentski Servis");
         
-        header.setAlignment(Pos.BOTTOM_LEFT);
-        header.setPadding(new Insets(25));
-        header.setSpacing(50);
+        header.setId("header");
         
         logo.setFitWidth(266);
         logo.setFitHeight(77);
         
-        naslov.setFont(new Font(40));
-        naslov.setStyle("-fx-text-fill: rgba(62, 64, 149, 1);");
+        naslov.setId("studentskiServis");
         
         header.getChildren().addAll(logo, naslov);
     }

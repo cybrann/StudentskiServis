@@ -1,15 +1,11 @@
 package gui.polozeniIspiti;
 
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.TextAlignment;
 
 public class PolozeniIspitiGUI {
     
@@ -24,16 +20,11 @@ public class PolozeniIspitiGUI {
         naslov    = new Label("Polozeni ispiti");
         tabela    = new TableView();
         
-        layout.setSpacing(8);
-        layout.setPadding(new Insets(0, 10, 0, 0));
+        layout.setId("layout");
         
         container.setId("okvir");
-        container.setAlignment(Pos.CENTER);
-        container.setPadding(new Insets(20, 0, 20, 0));
         
         naslov.setId("naslov");
-        naslov.setFont(new Font(20));
-        naslov.setTextAlignment(TextAlignment.CENTER);
         naslov.prefWidthProperty().bind(layout.widthProperty());
         
         kreirajTabelu();

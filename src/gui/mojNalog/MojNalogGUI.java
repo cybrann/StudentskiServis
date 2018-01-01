@@ -4,8 +4,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.TextAlignment;
 
 public abstract class MojNalogGUI {
     
@@ -25,11 +23,9 @@ public abstract class MojNalogGUI {
         label       = new Label[10];
         informacije = new Label[10];
         
-        layout.setSpacing(8);
+        layout.setId("mojNalogLayout");
         
-        naslov.setFont(new Font(20));
         naslov.setId("naslov");
-        naslov.setTextAlignment(TextAlignment.CENTER);
         naslov.prefWidthProperty().bind(layout.widthProperty());
         
         container.setId("container");

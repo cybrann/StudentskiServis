@@ -1,7 +1,5 @@
 package gui.prijavljeniIspiti;
 
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,8 +7,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.TextAlignment;
 
 public abstract class PrijavljeniIspitiGUI {
     
@@ -33,17 +29,11 @@ public abstract class PrijavljeniIspitiGUI {
         tabelaPrijavljeni   = new TableView();
         prijaviIspit        = new Button("Prijavi ispit");
         
-        layout.setSpacing(8);
-        layout.setPadding(new Insets(0, 10, 0, 0));
+        layout.setId("layout");
         
-        container.setId("okvir");
-        container.setAlignment(Pos.CENTER);
-        container.setPadding(new Insets(8, 0, 8, 0));
-        container.setSpacing(5);
+        container.setId("okvirPrijavljeni");
         
         naslov.setId("naslov");
-        naslov.setFont(new Font(20));
-        naslov.setTextAlignment(TextAlignment.CENTER);
         naslov.prefWidthProperty().bind(layout.widthProperty());
         
         kreirajTabelu(tabelaNeprijavljeni);
